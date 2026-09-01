@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Frank Bird | Author</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0d0f12;
+      color: #eee8dc;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    .cover-panel {
+      min-height: 100vh;
+      background:
+        url("cover.png")
+        right
+        center / 85% auto
+        no-repeat;
+    }
+
+    .info-panel {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 560px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3.6rem;
+      font-weight: normal;
+      letter-spacing: 0.12em;
+    }
+
+    .author {
+      margin-top: 8px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      opacity: 0.75;
+    }
+
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: #777;
+      margin: 45px 0;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: normal;
+      letter-spacing: 0.04em;
+    }
+
+    .novel {
+      margin-top: 8px;
+      font-style: italic;
+      opacity: 0.7;
+    }
+
+    .tagline {
+      margin-top: 32px;
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .coming-soon {
+      margin-top: 50px;
+      font-size: 0.85rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      margin-top: 70px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+@media (max-width: 800px) {
+
+  .page {
+    display: block;
+  }
+
+  .cover-panel {
+    min-height: 0;
+    aspect-ratio: 2 / 3;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .info-panel h1,
+  .info-panel .author,
+  .info-panel .divider {
+    display: none;
+  }
+
+  .info-panel {
+    min-height: auto;
+    padding: 35px 28px 45px;
+  }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="cover-panel"></section>
+
+    <section class="info-panel">
+
+      <div class="content">
+
+        <h1>FRANK BIRD</h1>
+
+        <div class="author">
+          Author
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Water Water Everywhere...</h2>
+
+        <div class="novel">
+          A novel
+        </div>
+
+        <div class="tagline">
+          Yes, it is everywhere.<br>
+          But what happens if you can't trust it?
+        </div>
+
+        <div class="coming-soon">
+          Coming Soon
+        </div>
+
+        <div class="contact">
+          <a href="mailto:contact@frankbirdauthor.co.uk">
+            contact@frankbirdauthor.co.uk
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
