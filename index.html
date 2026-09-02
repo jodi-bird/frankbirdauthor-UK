@@ -13,6 +13,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     html,
     body {
       margin: 0;
@@ -26,10 +30,13 @@
     }
 
 
-    /* MAIN PAGE */
+    /* =========================================================
+       LANDING PAGE
+       ========================================================= */
 
     .page {
       min-height: 100vh;
+
       display: grid;
       grid-template-columns: 50% 50%;
 
@@ -70,7 +77,6 @@
       padding: 70px;
     }
 
-
     .content {
       width: 100%;
       max-width: 560px;
@@ -87,7 +93,6 @@
       letter-spacing: 0.12em;
     }
 
-
     .author {
       margin-top: 8px;
 
@@ -97,9 +102,6 @@
 
       opacity: 0.75;
     }
-
-
-    /* DIVIDER */
 
     .divider {
       width: 80px;
@@ -121,12 +123,10 @@
       letter-spacing: 0.04em;
     }
 
-
     .novel {
       margin-top: 8px;
 
       font-style: italic;
-
       opacity: 0.7;
     }
 
@@ -144,7 +144,7 @@
     /* COMING SOON */
 
     .coming-soon {
-      margin-top: 50px;
+      margin-top: 45px;
 
       font-size: 0.85rem;
       letter-spacing: 0.3em;
@@ -152,25 +152,147 @@
     }
 
 
-    /* CONTACT */
+    /* FRONT PAGE NAVIGATION */
 
-    .contact {
-      margin-top: 70px;
+    .front-nav {
+      margin-top: 50px;
 
-      font-size: 0.9rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
+      gap: 14px 30px;
+
+      max-width: 430px;
+    }
+
+    .front-nav a {
+      display: block;
+
+      padding: 11px 0;
+
+      color: #f1f3f4;
+
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+      transition:
+        border-color 0.25s ease,
+        opacity 0.25s ease;
+    }
+
+    .front-nav a:hover {
+      border-color: rgba(255, 255, 255, 0.8);
       opacity: 0.8;
     }
 
+
+    /* CONTACT */
+
+    .contact {
+      margin-top: 50px;
+
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
 
     .contact a {
       color: inherit;
       text-decoration: none;
     }
 
-
     .contact a:hover {
       text-decoration: underline;
+    }
+
+
+    /* =========================================================
+       CONTENT SECTIONS
+       ========================================================= */
+
+    .site-section {
+      min-height: 75vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 100px 10%;
+
+      background-color: #081820;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .site-section:nth-of-type(even) {
+      background-color: #0a1c24;
+    }
+
+    .section-inner {
+      width: 100%;
+      max-width: 1100px;
+
+      margin: 0 auto;
+    }
+
+    .section-label {
+      margin-bottom: 18px;
+
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+
+      opacity: 0.55;
+    }
+
+    .site-section h3 {
+      margin: 0;
+
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: normal;
+      letter-spacing: 0.04em;
+    }
+
+    .section-line {
+      width: 80px;
+      height: 1px;
+
+      margin: 30px 0;
+
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .placeholder {
+      max-width: 650px;
+
+      font-size: 1.05rem;
+      line-height: 1.8;
+
+      opacity: 0.65;
+    }
+
+
+    /* BACK TO TOP */
+
+    .back-top {
+      display: inline-block;
+
+      margin-top: 45px;
+
+      color: #f1f3f4;
+
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      opacity: 0.6;
+    }
+
+    .back-top:hover {
+      opacity: 1;
     }
 
 
@@ -182,6 +304,8 @@
       bottom: 8px;
       right: 10px;
 
+      z-index: 100;
+
       font-size: 0.65rem;
       color: #899399;
       letter-spacing: 0.05em;
@@ -190,24 +314,26 @@
     }
 
 
-    /* MOBILE */
+    /* =========================================================
+       MOBILE
+       ========================================================= */
 
     @media (max-width: 800px) {
 
       .page {
-  display: block;
+        display: block;
 
-  background:
-    linear-gradient(
-      rgba(7, 19, 26, 0.58),
-      rgba(7, 19, 26, 0.78)
-    ),
-    url("images/sea.jpg");
+        background:
+          linear-gradient(
+            rgba(7, 19, 26, 0.58),
+            rgba(7, 19, 26, 0.78)
+          ),
+          url("images/sea.jpg");
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
 
 
       .cover-panel {
@@ -220,9 +346,13 @@
       }
 
 
+      /* Cover already contains these on mobile */
+
       .info-panel h1,
       .info-panel .author,
-      .info-panel .divider {
+      .info-panel .divider,
+      .info-panel h2,
+      .info-panel .novel {
         display: none;
       }
 
@@ -230,17 +360,60 @@
       .info-panel {
         min-height: auto;
 
-        padding: 35px 28px 45px;
-      }
-
-
-      h2 {
-        font-size: 1.6rem;
+        padding: 45px 28px 60px;
       }
 
 
       .tagline {
-        font-size: 1.1rem;
+        margin-top: 0;
+
+        font-size: 1.15rem;
+        line-height: 1.7;
+      }
+
+
+      .coming-soon {
+        margin-top: 42px;
+      }
+
+
+      .front-nav {
+        margin-top: 38px;
+
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        max-width: none;
+      }
+
+
+      .front-nav a {
+        padding: 13px 0;
+
+        font-size: 0.72rem;
+      }
+
+
+      .contact {
+        margin-top: 42px;
+      }
+
+
+      .site-section {
+        min-height: 65vh;
+
+        padding: 80px 28px;
+      }
+
+
+      .site-section h3 {
+        font-size: 2.2rem;
+      }
+
+
+      .placeholder {
+        font-size: 1rem;
       }
 
     }
@@ -250,7 +423,12 @@
 </head>
 
 
-<body>
+<body id="top">
+
+
+  <!-- =======================================================
+       LANDING PAGE
+       ======================================================= -->
 
   <main class="page">
 
@@ -262,6 +440,7 @@
     <section class="info-panel">
 
       <div class="content">
+
 
         <h1>FRANK BIRD</h1>
 
@@ -290,6 +469,27 @@
         </div>
 
 
+        <nav class="front-nav">
+
+          <a href="#book">
+            The Book
+          </a>
+
+          <a href="#behind">
+            Behind the Story
+          </a>
+
+          <a href="#world">
+            Explore the World
+          </a>
+
+          <a href="#frank">
+            Frank Bird
+          </a>
+
+        </nav>
+
+
         <div class="contact">
 
           <a href="mailto:contact@frankbirdauthor.co.uk">
@@ -298,6 +498,7 @@
 
         </div>
 
+
       </div>
 
     </section>
@@ -305,8 +506,142 @@
   </main>
 
 
+
+  <!-- =======================================================
+       THE BOOK
+       ======================================================= -->
+
+  <section class="site-section" id="book">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        Water Water Everywhere...
+      </div>
+
+      <h3>
+        The Book
+      </h3>
+
+      <div class="section-line"></div>
+
+      <div class="placeholder">
+        This section will introduce the story and the central question
+        behind <em>Water Water Everywhere...</em>
+      </div>
+
+      <a class="back-top" href="#top">
+        Back to top
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       BEHIND THE STORY
+       ======================================================= -->
+
+  <section class="site-section" id="behind">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        Beyond the pages
+      </div>
+
+      <h3>
+        Behind the Story
+      </h3>
+
+      <div class="section-line"></div>
+
+      <div class="placeholder">
+        Characters, ideas, research and some of the background
+        behind the novel will live here.
+      </div>
+
+      <a class="back-top" href="#top">
+        Back to top
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       EXPLORE THE WORLD
+       ======================================================= -->
+
+  <section class="site-section" id="world">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        The places behind the novel
+      </div>
+
+      <h3>
+        Explore the World
+      </h3>
+
+      <div class="section-line"></div>
+
+      <div class="placeholder">
+        Follow the story through the locations, landscapes and
+        real-world settings that form the world of the novel.
+      </div>
+
+      <a class="back-top" href="#top">
+        Back to top
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =======================================================
+       FRANK BIRD
+       ======================================================= -->
+
+  <section class="site-section" id="frank">
+
+    <div class="section-inner">
+
+      <div class="section-label">
+        About the author
+      </div>
+
+      <h3>
+        Frank Bird
+      </h3>
+
+      <div class="section-line"></div>
+
+      <div class="placeholder">
+        Author biography and background will live here.
+      </div>
+
+      <a class="back-top" href="#top">
+        Back to top
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- REVISION -->
+
   <div class="revision">
-    Revision 08....
+    Revision 09....
   </div>
 
 
