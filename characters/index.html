@@ -102,12 +102,16 @@
       color: rgba(255,255,255,0.72);
     }
 
-    .characters {
+   .characters {
       max-width: 1180px;
       margin: 0 auto;
 
       padding: 80px 7% 120px;
-    }
+
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 420px));
+      gap: 35px;
+}
 
     .character-card {
       position: relative;
@@ -206,8 +210,10 @@
       }
 
       .characters {
-        padding: 50px 24px 85px;
-      }
+       padding: 50px 24px 85px;
+       grid-template-columns: 1fr;
+       gap: 30px;
+}
 
       .character-card {
         max-width: none;
@@ -258,31 +264,56 @@
 
   <main class="characters">
 
-    <a class="character-card" href="josie/">
+  <a class="character-card" href="josie/">
 
-      <img
-        src="../images/characters/josie.png"
-        alt="Dr Josephine Maddocks">
+    <img
+      src="../images/characters/josie.png"
+      alt="Dr Josephine Maddocks">
 
-      <div class="character-info">
+    <div class="character-info">
 
-        <div class="role">
-          Scientist
-        </div>
-
-        <div class="name">
-          Dr Josephine Maddocks
-        </div>
-
-        <div class="more">
-          Meet Josie →
-        </div>
-
+      <div class="role">
+        Scientist
       </div>
 
-    </a>
+      <div class="name">
+        Dr Josephine Maddocks
+      </div>
 
-  </main>
+      <div class="more">
+        Meet Josie →
+      </div>
+
+    </div>
+
+  </a>
+
+
+  <a class="character-card" href="darren/">
+
+    <img
+      src="../images/characters/darren-approach.png"
+      alt="Darren">
+
+    <div class="character-info">
+
+      <div class="role">
+        Bellingham
+      </div>
+
+      <div class="name">
+        Darren
+      </div>
+
+      <div class="more">
+        Meet Darren →
+      </div>
+
+    </div>
+
+  </a>
+
+</main>
 
 </body>
 
