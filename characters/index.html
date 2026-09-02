@@ -102,16 +102,16 @@
       color: rgba(255,255,255,0.72);
     }
 
-   .characters {
+    .characters {
       max-width: 1180px;
       margin: 0 auto;
 
       padding: 80px 7% 120px;
 
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 420px));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 35px;
-}
+    }
 
     .character-card {
       position: relative;
@@ -139,11 +139,6 @@
       height: 100%;
 
       object-fit: cover;
-
-      /*
-        This centres the temporary group photograph
-        on Josie.
-      */
       object-position: 50% center;
     }
 
@@ -210,10 +205,10 @@
       }
 
       .characters {
-       padding: 50px 24px 85px;
-       grid-template-columns: 1fr;
-       gap: 30px;
-}
+        padding: 50px 24px 85px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
 
       .character-card {
         max-width: none;
@@ -264,56 +259,200 @@
 
   <main class="characters">
 
-  <a class="character-card" href="josie/">
+ <a class="character-card" href="darren/">
 
-    <img
-      src="../images/characters/josie.png"
-      alt="Dr Josephine Maddocks">
+      <img
+        src="../images/characters/darren-approach.png"
+        alt="Darren">
 
-    <div class="character-info">
+      <div class="character-info">
 
-      <div class="role">
-        Scientist
+        <div class="role">
+          Unemployed Junkie: Bellingham
+          </div>
+
+        <div class="name">
+          Darren
+        </div>
+
+        <div class="more">
+          Meet Darren →
+        </div>
+
       </div>
+
+    </a>
+
+<a class="character-card" href="dieter/">
+
+      <img
+        src="../images/characters/dieter-home.png"
+        alt="Dieter">
+
+      <div class="character-info">
+
+        <div class="role">
+          Rhineland-Palatinate
+        </div>
+
+        <div class="name">
+          Dieter
+        </div>
+
+        <div class="more">
+          Meet Dieter →
+        </div>
+
+      </div>
+
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+    <a class="character-card" href="tj/">
+
+      <img
+        src="../images/characters/tj-shot.png"
+        alt="TJ">
+
+      <div class="character-info">
+
+        <div class="role">
+          Special forces: Afghanistan
+        </div>
+
+        <div class="name">
+          TJ
+        </div>
+
+        <div class="more">
+          Meet TJ →
+        </div>
+
+      </div>
+
+    </a>
+
+
+    
+
+    <a class="character-card" href="christine/">
+
+
+      <img
+        src="../images/characters/christine-early.png"
+        alt="Christine">
+
+      <div class="character-info">
+
+        <div class="role">
+        Teacher: New York state
+        </div>
 
       <div class="name">
-        Dr Josephine Maddocks
+        Christine
       </div>
 
-      <div class="more">
-        Meet Josie →
+       <div class="more">
+          Meet Christine →
+       </div>
+
       </div>
 
-    </div>
+    </a>
 
-  </a>
+<a class="character-card" href="kirk/">
 
+      <img
+        src="../images/characters/kirk.png"
+        alt="Kirk">
 
-  <a class="character-card" href="darren/">
+      <div class="character-info">
 
-    <img
-      src="../images/characters/darren-approach.png"
-      alt="Darren">
+        <div class="role">
+          GCHQ Developer: Cheltenham
+          </div>
 
-    <div class="character-info">
+        <div class="name">
+          Kirk
+        </div>
 
-      <div class="role">
-        Bellingham
+        <div class="more">
+          Meet Kirk →
+        </div>
+
       </div>
 
-      <div class="name">
-        Darren
+    </a>
+
+
+
+<a class="character-card" href="josie/">
+
+      <img
+        src="../images/characters/josie.png"
+        alt="Dr Josephine Maddocks">
+
+      <div class="character-info">
+
+        <div class="role">
+          Scientist: Penarth, Africa, Sweden
+        </div>
+
+        <div class="name">
+          Dr Josephine Maddocks
+        </div>
+
+        <div class="more">
+          Meet Josie →
+        </div>
+
       </div>
 
-      <div class="more">
-        Meet Darren →
+    </a>
+
+
+<a class="character-card" href="gregoire/">
+
+      <img
+        src="../images/characters/gregoire.png"
+        alt="Dr Gregoire">
+
+      <div class="character-info">
+
+        <div class="role">
+          Scientist: Switzerland, Africa, Sweden
+        </div>
+
+        <div class="name">
+          Gregoire
+        </div>
+
+        <div class="more">
+          Meet Gregoire →
+        </div>
+
       </div>
 
-    </div>
+    </a>
 
-  </a>
 
-</main>
+
+
+  </main>
 
 </body>
 
