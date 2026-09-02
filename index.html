@@ -300,7 +300,26 @@
       text-decoration: underline;
 
     }
+    .story-link {
+      display: block;
 
+      color: inherit; 
+      text-decoration: none;
+    }
+
+.story-link:hover {
+  background: rgba(255,255,255,0.035);
+}
+
+.card-arrow {
+  margin-top: 24px;
+
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,0.48);
+}
 
 
     /* =========================================================
@@ -1023,16 +1042,7 @@
 
         <div class="divider"></div>
 
-
-        <h2>
-          Water Water Everywhere...
-        </h2>
-
-
-        <div class="novel">
-          A novel
-        </div>
-
+      
 
         <div class="tagline">
 
@@ -1188,21 +1198,23 @@
       <div class="story-grid">
 
 
-        <div class="story-card">
+       <a class="story-card story-link" href="characters/">
 
-          <h4>
-            The Characters
-          </h4>
+     <h4>
+        The Characters
+      </h4>
 
-          <p>
+      <p>
+        Meet some of the people drawn into a story
+        whose consequences extend far beyond anything
+        they first imagine.
+      </p>
 
-            Meet some of the people drawn into a story
-            whose consequences extend far beyond anything
-            they first imagine.
+  <div class="card-arrow">
+    Meet the characters →
+  </div>
 
-          </p>
-
-        </div>
+</a>
 
 
         <div class="story-card">
@@ -1508,7 +1520,7 @@
   <!-- REVISION -->
 
   <div class="revision">
-    Revision 1.01....
+    Revision 1.1.0....
   </div>
 
 

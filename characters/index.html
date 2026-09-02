@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Characters | Frank Bird</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: #07151d;
+      color: #f3f3f1;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topbar {
+      min-height: 80px;
+      padding: 0 7%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.18em;
+
+      color: white;
+      text-decoration: none;
+    }
+
+    .home {
+      font-size: 0.67rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 85px 8% 65px;
+
+      background:
+        linear-gradient(
+          rgba(7,19,26,0.55),
+          rgba(7,19,26,0.82)
+        ),
+        url("../images/sea.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .label {
+      margin-bottom: 15px;
+
+      font-size: 0.67rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,0.55);
+    }
+
+    h1 {
+      margin: 0;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: normal;
+    }
+
+    .intro {
+      margin-top: 25px;
+      max-width: 650px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.3rem;
+      line-height: 1.65;
+
+      color: rgba(255,255,255,0.72);
+    }
+
+    .characters {
+      max-width: 1180px;
+      margin: 0 auto;
+
+      padding: 80px 7% 120px;
+    }
+
+    .character-card {
+      position: relative;
+
+      display: block;
+
+      width: 100%;
+      max-width: 420px;
+      height: 560px;
+
+      overflow: hidden;
+
+      color: white;
+      text-decoration: none;
+
+      border: 1px solid rgba(255,255,255,0.1);
+      background: #091c25;
+    }
+
+    .character-card img {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      /*
+        This centres the temporary group photograph
+        on Josie.
+      */
+      object-position: 50% center;
+    }
+
+    .character-card::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(3,12,17,0.98) 0%,
+          rgba(3,12,17,0.55) 35%,
+          transparent 68%
+        );
+    }
+
+    .character-info {
+      position: absolute;
+
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+
+      z-index: 2;
+    }
+
+    .role {
+      margin-bottom: 8px;
+
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,0.55);
+    }
+
+    .name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    .more {
+      margin-top: 18px;
+
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+
+      color: rgba(255,255,255,0.58);
+    }
+
+    @media (max-width: 800px) {
+
+      .topbar {
+        min-height: 70px;
+        padding: 0 24px;
+      }
+
+      .hero {
+        padding: 70px 28px 55px;
+      }
+
+      .characters {
+        padding: 50px 24px 85px;
+      }
+
+      .character-card {
+        max-width: none;
+        height: 540px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+
+    <a class="brand" href="../">
+      FRANK BIRD
+    </a>
+
+    <a class="home" href="../">
+      Home
+    </a>
+
+  </header>
+
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="label">
+        Water Water Everywhere...
+      </div>
+
+      <h1>
+        The Characters
+      </h1>
+
+      <div class="intro">
+        Different lives. Different places.<br>
+        Each drawn into the same unfolding story.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <main class="characters">
+
+    <a class="character-card" href="josie/">
+
+      <img
+        src="../images/characters/josie.png"
+        alt="Dr Josephine Maddocks">
+
+      <div class="character-info">
+
+        <div class="role">
+          Scientist
+        </div>
+
+        <div class="name">
+          Dr Josephine Maddocks
+        </div>
+
+        <div class="more">
+          Meet Josie →
+        </div>
+
+      </div>
+
+    </a>
+
+  </main>
+
+</body>
+
+</html>
