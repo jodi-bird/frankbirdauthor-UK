@@ -4,7 +4,10 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Frank Bird | Author</title>
 
@@ -49,7 +52,7 @@
       --muted: rgba(243, 243, 241, 0.68);
       --faint: rgba(243, 243, 241, 0.38);
 
-      --line: rgba(255,255,255,0.18);
+      --line: rgba(255, 255, 255, 0.18);
     }
 
     a {
@@ -62,47 +65,39 @@
        ========================================================= */
 
     .page {
-
       min-height: 100vh;
 
       display: grid;
       grid-template-columns: 50% 50%;
 
       background:
-
         linear-gradient(
           rgba(7, 19, 26, 0.46),
           rgba(7, 19, 26, 0.67)
         ),
-
         url("images/sea.jpg");
 
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-
     }
 
 
     /* BOOK COVER */
 
     .cover-panel {
-
       min-height: 100vh;
 
       background:
-
         url("images/cover.png")
         right center / 85% auto
         no-repeat;
-
     }
 
 
     /* LANDING INFORMATION */
 
     .info-panel {
-
       min-height: 100vh;
 
       display: flex;
@@ -110,35 +105,32 @@
       justify-content: center;
 
       padding: 70px;
-
     }
 
     .content {
-
       width: 100%;
       max-width: 580px;
-
     }
 
 
     /* AUTHOR */
 
     h1 {
-
       margin: 0;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-size: clamp(3rem, 5vw, 4.5rem);
 
       font-weight: normal;
 
       letter-spacing: 0.10em;
-
     }
 
     .author {
-
       margin-top: 5px;
 
       font-size: 0.78rem;
@@ -148,70 +140,66 @@
       text-transform: uppercase;
 
       opacity: 0.65;
-
     }
 
 
     /* DIVIDER */
 
     .divider {
-
       width: 82px;
       height: 1px;
 
       margin: 42px 0;
 
-      background: rgba(255,255,255,0.42);
-
+      background: rgba(255, 255, 255, 0.42);
     }
 
 
     /* BOOK TITLE */
 
     h2 {
-
       margin: 0;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-size: 2.15rem;
 
       font-weight: normal;
 
       letter-spacing: 0.025em;
-
     }
 
     .novel {
-
       margin-top: 6px;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-style: italic;
 
       opacity: 0.62;
-
     }
 
 
     /* TAGLINE */
 
     .tagline {
-
       margin-top: 34px;
 
       font-size: 1.24rem;
 
       line-height: 1.65;
-
     }
 
 
     /* COMING SOON */
 
     .coming-soon {
-
       margin-top: 45px;
 
       font-size: 0.76rem;
@@ -221,14 +209,12 @@
       text-transform: uppercase;
 
       opacity: 0.9;
-
     }
 
 
     /* FRONT NAVIGATION */
 
     .front-nav {
-
       margin-top: 45px;
 
       max-width: 460px;
@@ -238,11 +224,9 @@
       grid-template-columns: 1fr 1fr;
 
       column-gap: 35px;
-
     }
 
     .front-nav a {
-
       padding: 12px 0;
 
       border-bottom: 1px solid var(--line);
@@ -261,65 +245,63 @@
         opacity 0.25s ease,
         padding-left 0.25s ease,
         border-color 0.25s ease;
-
     }
 
     .front-nav a:hover {
-
       opacity: 1;
 
       padding-left: 6px;
 
-      border-color: rgba(255,255,255,0.65);
-
+      border-color: rgba(255, 255, 255, 0.65);
     }
 
 
     /* CONTACT */
 
     .contact {
-
       margin-top: 46px;
 
       font-size: 0.82rem;
 
       opacity: 0.65;
-
     }
 
     .contact a {
-
       text-decoration: none;
-
     }
 
     .contact a:hover {
-
       opacity: 1;
 
       text-decoration: underline;
-
     }
+
+
+    /* STORY LINKS */
+
     .story-link {
       display: block;
 
-      color: inherit; 
+      color: inherit;
+
       text-decoration: none;
     }
 
-.story-link:hover {
-  background: rgba(255,255,255,0.035);
-}
+    .story-link:hover {
+      background: rgba(255, 255, 255, 0.035);
+    }
 
-.card-arrow {
-  margin-top: 24px;
+    .card-arrow {
+      margin-top: 24px;
 
-  font-size: 0.65rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+      font-size: 0.65rem;
 
-  color: rgba(255,255,255,0.48);
-}
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+
+      color: rgba(255, 255, 255, 0.48);
+    }
 
 
     /* =========================================================
@@ -327,19 +309,18 @@
        ========================================================= */
 
     .site-section {
-
       position: relative;
 
       padding: 120px 9%;
 
       overflow: hidden;
 
-      border-top: 1px solid rgba(255,255,255,0.05);
-
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.05);
     }
 
     .section-inner {
-
       width: 100%;
 
       max-width: 1180px;
@@ -349,11 +330,9 @@
       position: relative;
 
       z-index: 2;
-
     }
 
     .section-label {
-
       margin-bottom: 18px;
 
       font-size: 0.67rem;
@@ -363,52 +342,50 @@
       text-transform: uppercase;
 
       color: var(--muted);
-
     }
 
     .site-section h3 {
-
       margin: 0;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-size: clamp(2.4rem, 5vw, 4.6rem);
 
       font-weight: normal;
 
       line-height: 1.08;
-
     }
 
     .section-line {
-
       width: 75px;
       height: 1px;
 
       margin: 30px 0 38px;
 
-      background: rgba(255,255,255,0.38);
-
+      background: rgba(255, 255, 255, 0.38);
     }
 
     .lead {
-
       max-width: 760px;
 
       margin: 0;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-size: clamp(1.25rem, 2vw, 1.55rem);
 
       line-height: 1.7;
 
-      color: rgba(255,255,255,0.88);
-
+      color: rgba(255, 255, 255, 0.88);
     }
 
     .body-copy {
-
       max-width: 700px;
 
       margin-top: 28px;
@@ -418,9 +395,7 @@
       line-height: 1.9;
 
       color: var(--muted);
-
     }
-
 
 
     /* =========================================================
@@ -428,50 +403,46 @@
        ========================================================= */
 
     #book {
-
       min-height: 80vh;
 
       display: flex;
+
       align-items: center;
 
       background:
-
         linear-gradient(
           90deg,
-          rgba(5,17,23,0.95),
-          rgba(7,28,38,0.82)
+          rgba(5, 17, 23, 0.95),
+          rgba(7, 28, 38, 0.82)
         ),
-
         url("images/sea.jpg");
 
       background-size: cover;
 
       background-position: center 65%;
-
     }
 
     .book-question {
-
       margin-top: 55px;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-      font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+      font-size:
+        clamp(1.8rem, 3.5vw, 3.2rem);
 
       line-height: 1.35;
 
       max-width: 900px;
-
     }
 
     .book-question span {
-
       display: block;
 
-      color: rgba(255,255,255,0.58);
-
+      color: rgba(255, 255, 255, 0.58);
     }
-
 
 
     /* =========================================================
@@ -479,45 +450,42 @@
        ========================================================= */
 
     #behind {
-
       background: var(--dark2);
-
     }
 
     .story-grid {
-
       margin-top: 65px;
 
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
       gap: 30px;
-
     }
 
     .story-card {
-
       padding: 30px 0;
 
-      border-top: 1px solid var(--line);
-
+      border-top:
+        1px solid
+        var(--line);
     }
 
     .story-card h4 {
-
       margin: 0 0 15px;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-size: 1.45rem;
 
       font-weight: normal;
-
     }
 
     .story-card p {
-
       margin: 0;
 
       font-size: 0.95rem;
@@ -525,9 +493,7 @@
       line-height: 1.75;
 
       color: var(--muted);
-
     }
-
 
 
     /* =========================================================
@@ -535,45 +501,47 @@
        ========================================================= */
 
     #world {
-
       background:
-
         linear-gradient(
-          rgba(7,21,29,0.90),
-          rgba(7,21,29,0.96)
+          rgba(7, 21, 29, 0.90),
+          rgba(7, 21, 29, 0.96)
         ),
-
         url("images/sea.jpg");
 
       background-size: cover;
 
       background-position: center;
-
     }
 
     .locations {
-
       margin-top: 65px;
 
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px solid
+        var(--line);
 
-      border-left: 1px solid var(--line);
-
+      border-left:
+        1px solid
+        var(--line);
     }
 
     .location {
-
       min-height: 165px;
 
       padding: 30px;
 
-      border-right: 1px solid var(--line);
+      border-right:
+        1px solid
+        var(--line);
 
-      border-bottom: 1px solid var(--line);
+      border-bottom:
+        1px solid
+        var(--line);
 
       display: flex;
 
@@ -582,29 +550,28 @@
       justify-content: space-between;
 
       text-decoration: none;
+
       color: inherit;
 
       transition:
         background 0.3s ease;
-
     }
 
     .location:hover {
-
-      background: rgba(255,255,255,0.045);
-
+      background:
+        rgba(255, 255, 255, 0.045);
     }
 
     .location-name {
-
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-size: 1.5rem;
-
     }
 
     .location-note {
-
       margin-top: 20px;
 
       font-size: 0.75rem;
@@ -614,59 +581,61 @@
       text-transform: uppercase;
 
       color: var(--faint);
-
     }
-
 
 
     /* =========================================================
-       AUTHOR
+       FRANK BIRD
        ========================================================= */
 
     #frank {
-
       background: var(--dark);
-
     }
 
     .author-layout {
-
       display: grid;
 
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns:
+        1fr 1.2fr;
 
       gap: 90px;
 
       align-items: start;
-
     }
 
     .author-heading {
-
       position: sticky;
 
       top: 70px;
+    }
 
+    .author-photo {
+      width: min(100%, 260px);
+
+      margin-top: 34px;
+    }
+
+    .author-photo img {
+      width: 100%;
+
+      display: block;
+
+      border-radius: 8px;
     }
 
     .author-copy {
-
       font-size: 1.02rem;
 
       line-height: 1.95;
 
       color: var(--muted);
-
     }
 
     .author-copy p {
-
       margin-top: 0;
 
       margin-bottom: 24px;
-
     }
-
 
 
     /* =========================================================
@@ -674,7 +643,6 @@
        ========================================================= */
 
     .final-panel {
-
       min-height: 60vh;
 
       padding: 120px 9%;
@@ -688,42 +656,38 @@
       text-align: center;
 
       background:
-
         linear-gradient(
-          rgba(5,18,25,0.72),
-          rgba(5,18,25,0.90)
+          rgba(5, 18, 25, 0.72),
+          rgba(5, 18, 25, 0.90)
         ),
-
         url("images/sea.jpg");
 
       background-size: cover;
 
       background-position: center;
-
     }
 
     .final-inner {
-
       max-width: 780px;
-
     }
 
     .final-panel h3 {
-
       margin: 0;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      font-size:
+        clamp(2.4rem, 5vw, 4.5rem);
 
       font-weight: normal;
 
       line-height: 1.15;
-
     }
 
     .final-panel p {
-
       margin: 28px auto 0;
 
       max-width: 600px;
@@ -731,18 +695,18 @@
       color: var(--muted);
 
       line-height: 1.8;
-
     }
 
     .final-contact {
-
       display: inline-block;
 
       margin-top: 45px;
 
       padding-bottom: 6px;
 
-      border-bottom: 1px solid rgba(255,255,255,0.45);
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.45);
 
       text-decoration: none;
 
@@ -751,9 +715,7 @@
       letter-spacing: 0.24em;
 
       text-transform: uppercase;
-
     }
-
 
 
     /* =========================================================
@@ -761,7 +723,6 @@
        ========================================================= */
 
     .back-top {
-
       display: inline-block;
 
       margin-top: 55px;
@@ -775,15 +736,11 @@
       text-transform: uppercase;
 
       text-decoration: none;
-
     }
 
     .back-top:hover {
-
       color: white;
-
     }
-
 
 
     /* =========================================================
@@ -791,7 +748,6 @@
        ========================================================= */
 
     .revision {
-
       position: fixed;
 
       bottom: 8px;
@@ -803,10 +759,9 @@
 
       letter-spacing: 0.05em;
 
-      color: rgba(255,255,255,0.36);
-
+      color:
+        rgba(255, 255, 255, 0.36);
     }
-
 
 
     /* =========================================================
@@ -815,29 +770,22 @@
 
     @media (max-width: 800px) {
 
-
       .page {
-
         display: block;
 
         background:
-
           linear-gradient(
-            rgba(7,19,26,0.54),
-            rgba(7,19,26,0.74)
+            rgba(7, 19, 26, 0.54),
+            rgba(7, 19, 26, 0.74)
           ),
-
           url("images/sea.jpg");
 
         background-size: cover;
 
         background-position: center;
-
       }
 
-
       .cover-panel {
-
         min-height: 0;
 
         aspect-ratio: 2 / 3;
@@ -845,9 +793,7 @@
         background-size: contain;
 
         background-position: center;
-
       }
-
 
       /*
         The cover already contains the author name
@@ -859,155 +805,114 @@
       .info-panel .divider,
       .info-panel h2,
       .info-panel .novel {
-
         display: none;
-
       }
 
-
       .info-panel {
-
         min-height: auto;
 
         padding: 48px 28px 65px;
-
       }
 
-
       .tagline {
-
         margin-top: 0;
 
         font-size: 1.12rem;
 
         line-height: 1.75;
-
       }
-
 
       .coming-soon {
-
         margin-top: 38px;
-
       }
 
-
       .front-nav {
-
         margin-top: 38px;
 
         grid-template-columns: 1fr;
-
       }
-
 
       .front-nav a {
-
         padding: 13px 0;
-
       }
 
-
       .contact {
-
         margin-top: 40px;
-
       }
 
 
       /* CONTENT */
 
       .site-section {
-
         padding: 85px 28px;
-
       }
-
 
       .site-section h3 {
-
         font-size: 2.55rem;
-
       }
-
 
       .lead {
-
         font-size: 1.2rem;
-
       }
 
-
       .body-copy {
-
         font-size: 0.98rem;
-
       }
 
 
       /* STORY */
 
       .story-grid {
-
         grid-template-columns: 1fr;
 
         gap: 5px;
 
         margin-top: 45px;
-
       }
 
 
       /* LOCATIONS */
 
       .locations {
-
         grid-template-columns: 1fr;
 
         margin-top: 45px;
-
       }
 
-
       .location {
-
         min-height: 125px;
-
       }
 
 
       /* AUTHOR */
 
       .author-layout {
-
         display: block;
-
       }
 
       .author-heading {
-
         position: static;
 
         margin-bottom: 45px;
+      }
 
+      .author-photo {
+        width: min(100%, 300px);
+
+        margin-top: 30px;
       }
 
 
       /* FINAL */
 
       .final-panel {
-
         min-height: 65vh;
 
         padding: 90px 28px;
-
       }
 
-
       .final-panel h3 {
-
         font-size: 2.5rem;
-
       }
 
     }
@@ -1026,7 +931,6 @@
 
   <main class="page">
 
-
     <section class="cover-panel">
     </section>
 
@@ -1035,31 +939,24 @@
 
       <div class="content">
 
-
-        <h1>FRANK BIRD</h1>
+        <h1>
+          FRANK BIRD
+        </h1>
 
         <div class="author">
           Author
         </div>
 
-
         <div class="divider"></div>
 
-      
-
         <div class="tagline">
-
           Yes, it is everywhere.<br>
-
           But what happens if you can't trust it?
-
         </div>
-
 
         <div class="coming-soon">
           Coming Soon
         </div>
-
 
         <nav class="front-nav">
 
@@ -1081,58 +978,49 @@
 
         </nav>
 
-
         <div class="contact">
 
-          <a href="mailto:contact@frankbirdauthor.co.uk">
-
+          <a
+            href="mailto:contact@frankbirdauthor.co.uk"
+          >
             contact@frankbirdauthor.co.uk
-
           </a>
 
         </div>
-
 
       </div>
 
     </section>
 
-
   </main>
-
 
 
   <!-- =======================================================
        THE BOOK
        ======================================================= -->
 
-  <section class="site-section" id="book">
+  <section
+    class="site-section"
+    id="book"
+  >
 
     <div class="section-inner">
-
 
       <div class="section-label">
         Water Water Everywhere...
       </div>
 
-
       <h3>
         Water is everywhere.
       </h3>
 
-
       <div class="section-line"></div>
 
-
       <p class="lead">
-
         It sustains us, surrounds us and passes almost unnoticed
         through every part of modern life.
-
         Until something makes us question it.
-
       </p>
-
 
       <div class="book-question">
 
@@ -1146,78 +1034,73 @@
 
       </div>
 
-
       <p class="body-copy">
-
         <em>Water Water Everywhere...</em> is a contemporary thriller
         spanning countries, institutions and lives, as an apparently
         disconnected series of events begins to reveal something far
         more disturbing.
-
       </p>
 
-
-      <a class="back-top" href="#top">
+      <a
+        class="back-top"
+        href="#top"
+      >
         Back to top
       </a>
-
 
     </div>
 
   </section>
 
 
-
   <!-- =======================================================
        BEHIND THE STORY
        ======================================================= -->
 
-  <section class="site-section" id="behind">
+  <section
+    class="site-section"
+    id="behind"
+  >
 
     <div class="section-inner">
-
 
       <div class="section-label">
         Beyond the pages
       </div>
 
-
       <h3>
         Behind the Story
       </h3>
 
-
       <div class="section-line"></div>
 
-
       <p class="lead">
-
         The novel moves through science, government,
         industry and ordinary lives.
-
       </p>
-
 
       <div class="story-grid">
 
+        <a
+          class="story-card story-link"
+          href="characters/"
+        >
 
-       <a class="story-card story-link" href="characters/">
+          <h4>
+            The Characters
+          </h4>
 
-     <h4>
-        The Characters
-      </h4>
+          <p>
+            Meet some of the people drawn into a story
+            whose consequences extend far beyond anything
+            they first imagine.
+          </p>
 
-      <p>
-        Meet some of the people drawn into a story
-        whose consequences extend far beyond anything
-        they first imagine.
-      </p>
+          <div class="card-arrow">
+            Meet the characters →
+          </div>
 
-  <div class="card-arrow">
-    Meet the characters →
-  </div>
-
-</a>
+        </a>
 
 
         <div class="story-card">
@@ -1227,11 +1110,9 @@
           </h4>
 
           <p>
-
             Explore some of the real science, technology,
             institutions and events that helped shape
             the fictional world of the novel.
-
           </p>
 
         </div>
@@ -1244,227 +1125,255 @@
           </h4>
 
           <p>
-
             Additional stories and background material
             will reveal events that sit outside the main
             narrative.
-
           </p>
 
         </div>
 
-
       </div>
 
-
-      <a class="back-top" href="#top">
+      <a
+        class="back-top"
+        href="#top"
+      >
         Back to top
       </a>
-
 
     </div>
 
   </section>
-
 
 
   <!-- =======================================================
        EXPLORE THE WORLD
        ======================================================= -->
 
-  <section class="site-section" id="world">
+  <section
+    class="site-section"
+    id="world"
+  >
 
     <div class="section-inner">
-
 
       <div class="section-label">
         A story without borders
       </div>
 
+      <h3>
+        Explore the World
+      </h3>
+
+      <div class="section-line"></div>
+
+      <p class="lead">
+        The story moves across countries and continents.
+        These are some of the real places behind the fiction.
+      </p>
 
       <div class="locations">
 
-  <a class="location" href="locations/africa/">
 
-    <div class="location-name">
-      Africa
-    </div>
+        <a
+          class="location"
+          href="locations/africa/"
+        >
 
-    <div class="location-note">
-      Where the story begins
-    </div>
+          <div class="location-name">
+            Africa
+          </div>
 
-  </a>
+          <div class="location-note">
+            Where the story begins
+          </div>
 
-
-  <a class="location" href="locations/sweden/">
-
-    <div class="location-name">
-      Sweden
-    </div>
-
-    <div class="location-note">
-      Science and discovery
-    </div>
-
-  </a>
+        </a>
 
 
-  <a class="location" href="locations/uk/">
+        <a
+          class="location"
+          href="locations/sweden/"
+        >
 
-    <div class="location-name">
-      United Kingdom
-    </div>
+          <div class="location-name">
+            Sweden
+          </div>
 
-    <div class="location-note">
-      The investigation widens
-    </div>
+          <div class="location-note">
+            Science and discovery
+          </div>
 
-  </a>
-
-
-  <a class="location" href="locations/germany/">
-
-    <div class="location-name">
-      Germany
-    </div>
-
-    <div class="location-note">
-      Another piece of the puzzle
-    </div>
-
-  </a>
+        </a>
 
 
-  <a class="location" href="locations/usa/">
+        <a
+          class="location"
+          href="locations/uk/"
+        >
 
-    <div class="location-name">
-      USA
-    </div>
+          <div class="location-name">
+            United Kingdom
+          </div>
 
-    <div class="location-note">
-      Across the Atlantic
-    </div>
+          <div class="location-note">
+            The investigation widens
+          </div>
 
-  </a>
-
-
-  <div class="location">
-
-    <div class="location-name">
-      Moscow
-    </div>
-
-    <div class="location-note">
-      An unfinished story
-    </div>
-
-  </div>
+        </a>
 
 
-  <div class="location">
+        <a
+          class="location"
+          href="locations/germany/"
+        >
 
-    <div class="location-name">
-      Helsinki
-    </div>
+          <div class="location-name">
+            Germany
+          </div>
 
-    <div class="location-note">
-      Where another story waits
-    </div>
+          <div class="location-note">
+            Another piece of the puzzle
+          </div>
 
-  </div>
+        </a>
 
-</div>
+
+        <a
+          class="location"
+          href="locations/usa/"
+        >
+
+          <div class="location-name">
+            USA
+          </div>
+
+          <div class="location-note">
+            Across the Atlantic
+          </div>
+
+        </a>
+
+
+        <div class="location">
+
+          <div class="location-name">
+            Moscow
+          </div>
+
+          <div class="location-note">
+            An unfinished story
+          </div>
+
+        </div>
+
+
+        <div class="location">
+
+          <div class="location-name">
+            Helsinki
+          </div>
+
+          <div class="location-note">
+            Where another story waits
+          </div>
+
+        </div>
+
 
       </div>
 
-
-      <a class="back-top" href="#top">
+      <a
+        class="back-top"
+        href="#top"
+      >
         Back to top
       </a>
-
 
     </div>
 
   </section>
-
 
 
   <!-- =======================================================
        FRANK BIRD
        ======================================================= -->
 
-  <section class="site-section" id="frank">
+  <section
+    class="site-section"
+    id="frank"
+  >
 
     <div class="section-inner">
-
 
       <div class="author-layout">
 
 
         <div class="author-heading">
 
-
           <div class="section-label">
             About the author
           </div>
-
 
           <h3>
             Frank Bird
           </h3>
 
-
           <div class="section-line"></div>
 
+          <div class="author-photo">
+
+            <img
+              src="images/characters/frank.png"
+              alt="Frank Bird"
+            >
+
+          </div>
 
         </div>
 
 
         <div class="author-copy">
 
-
           <p>
-
-            Frank Bird came to writing after a working life that
-            repeatedly placed him close to technology, engineering,
-            industry and the people responsible for making complicated
-            things actually work.
-
+            Born in the UK in the post-war years, Frank has spent much of his
+            working life in Britain, while also travelling extensively throughout
+            Europe and the USA. His career has included roles in construction,
+            the casino industry, engineering, management, R&amp;D, consultancy
+            and project management.
           </p>
 
-
           <p>
-
-            Those experiences — together with a longstanding fascination
-            with how apparently separate events can become connected —
-            helped provide the foundations for
-            <em>Water Water Everywhere...</em>
-
+            Frank came to writing as a relaxing escape from a working life that
+            repeatedly placed him close to developing technologies, engineering
+            and industry — and alongside many of the people responsible for
+            making complicated things actually work.
           </p>
 
-
           <p>
-
-            It is his first novel.
-
+            Those experiences, together with a longstanding fascination with how
+            apparently separate events can become connected, helped provide the
+            foundations for <em>Water Water Everywhere...</em>
           </p>
 
+          <p>
+            This is his first novel.
+          </p>
 
-          <a class="back-top" href="#top">
+          <a
+            class="back-top"
+            href="#top"
+          >
             Back to top
           </a>
 
-
         </div>
-
 
       </div>
 
     </div>
 
   </section>
-
 
 
   <!-- =======================================================
@@ -1475,51 +1384,37 @@
 
     <div class="final-inner">
 
-
       <div class="section-label">
         Water Water Everywhere...
       </div>
 
-
       <h3>
-
         Yes, it is everywhere.
-
         <br>
-
         But can you trust it?
-
       </h3>
 
-
       <p>
-
         Publication information and further material
         from the world of the novel will appear here.
-
       </p>
-
 
       <a
         class="final-contact"
         href="mailto:contact@frankbirdauthor.co.uk"
       >
-
         Contact Frank Bird
-
       </a>
-
 
     </div>
 
   </section>
 
 
-
   <!-- REVISION -->
 
   <div class="revision">
-    Revision 1.2.3....
+    Revision 1.3.0..
   </div>
 
 
