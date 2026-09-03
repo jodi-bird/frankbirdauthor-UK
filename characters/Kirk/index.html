@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kirk | Frank Bird</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #f5f5f5;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      padding: 40px 0 70px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 30px;
+      color: #ddd;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .back-link:hover {
+      color: #fff;
+    }
+
+    .character-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .character-image img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .character-role {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      font-weight: 700;
+    }
+
+    .character-intro {
+      font-size: 1.18rem;
+      color: #ddd;
+      max-width: 620px;
+    }
+
+    .character-section {
+      margin-top: 70px;
+      max-width: 850px;
+    }
+
+    .character-section h2 {
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+    }
+
+    .character-section p {
+      color: #ccc;
+      font-size: 1.15rem;
+      line-height: 1.75;
+    }
+
+    @media (max-width: 760px) {
+
+      .page {
+        padding-top: 25px;
+      }
+
+      .character-hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <a class="back-link" href="../">
+      ← Back to characters
+    </a>
+
+    <section class="character-hero">
+
+      <div class="character-image">
+
+        <img
+          src="../../images/characters/kirk.png"
+          alt="Kirk">
+
+      </div>
+
+      <div class="character-details">
+
+        <div class="character-role">
+          Developer · GCHQ ·  Cheltenham
+        </div>
+
+        <h1>
+          Kirk
+        </h1>
+
+        <div class="character-intro">
+
+          Kirk is a dedicated developer at GCHQ in Cheltenham, known for his technical 
+          skills and ability to solve complex problems.
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="character-section">
+
+      <h2>
+        In the story.
+      </h2>
+
+      <p>
+        Kirk is a key figure in the narrative, bringing his expertise and analytical mind to the forefront of the plot.
+        His contributions are crucial in navigating the challenges faced by the characters.
+    </p>
+      <p>
+        Kirk
+      </p>
+      <p>
+        His charm 
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>
