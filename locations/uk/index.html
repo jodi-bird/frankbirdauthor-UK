@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>United Kingdom | Frank Bird</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: #07151d;
+      color: #f3f3f1;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+
+      min-height: 100vh;
+
+      padding: 90px 9%;
+
+      background:
+
+        linear-gradient(
+          rgba(7,21,29,0.90),
+          rgba(7,21,29,0.96)
+        ),
+
+        url("../../images/sea.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+    }
+
+    .inner {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+
+      margin-bottom: 18px;
+
+      font-size: 0.67rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+
+      color: rgba(243,243,241,0.68);
+
+    }
+
+    h1 {
+
+      margin: 0;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(2.8rem, 6vw, 5rem);
+
+      font-weight: normal;
+      line-height: 1.08;
+
+    }
+
+    .section-line {
+
+      width: 75px;
+      height: 1px;
+
+      margin: 30px 0 38px;
+
+      background: rgba(255,255,255,0.38);
+
+    }
+
+    .lead {
+
+      max-width: 760px;
+
+      margin: 0;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(1.25rem, 2vw, 1.55rem);
+
+      line-height: 1.7;
+
+      color: rgba(255,255,255,0.88);
+
+    }
+
+    .locations {
+
+      margin-top: 65px;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      border-top: 1px solid rgba(255,255,255,0.18);
+      border-left: 1px solid rgba(255,255,255,0.18);
+
+    }
+
+    .location {
+
+      min-height: 165px;
+
+      padding: 30px;
+
+      border-right: 1px solid rgba(255,255,255,0.18);
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      text-decoration: none;
+
+      color: inherit;
+
+      transition: background 0.3s ease;
+
+    }
+
+    .location:hover {
+
+      background: rgba(255,255,255,0.045);
+
+    }
+
+    .location-name {
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 1.5rem;
+
+    }
+
+    .location-note {
+
+      margin-top: 20px;
+
+      font-size: 0.75rem;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+      color: rgba(243,243,241,0.38);
+
+    }
+
+    .back-top {
+
+      display: inline-block;
+
+      margin-top: 55px;
+
+      color: rgba(243,243,241,0.68);
+
+      font-size: 0.67rem;
+
+      letter-spacing: 0.2em;
+
+      text-transform: uppercase;
+
+      text-decoration: none;
+
+    }
+
+    .back-top:hover {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+
+      .page {
+        padding: 70px 28px;
+      }
+
+      .locations {
+
+        grid-template-columns: 1fr;
+
+        margin-top: 45px;
+
+      }
+
+      .location {
+        min-height: 125px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <main class="page">
+
+    <div class="inner">
+
+      <div class="section-label">
+        Explore the World
+      </div>
+
+      <h1>
+        United Kingdom
+      </h1>
+
+      <div class="section-line"></div>
+
+      <p class="lead">
+        Familiar places become part of something much larger as the story begins to widen.
+      </p>
+
+      <div class="locations">
+
+        <a class="location" href="gchq/">
+
+          <div class="location-name">
+            GCHQ
+          </div>
+
+          <div class="location-note">
+            Cheltenham · Gloucestershire
+          </div>
+
+        </a>
+
+      </div>
+
+      <a class="back-top" href="../../#world">
+        ← Back to Explore the World
+      </a>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
