@@ -4,7 +4,11 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>United Kingdom | Frank Bird</title>
 
@@ -32,23 +36,18 @@
     }
 
     .page {
-
       min-height: 100vh;
-
       padding: 90px 9%;
 
       background:
-
         linear-gradient(
-          rgba(7,21,29,0.90),
-          rgba(7,21,29,0.96)
+          rgba(7, 21, 29, 0.90),
+          rgba(7, 21, 29, 0.96)
         ),
-
         url("../../images/sea.jpg");
 
       background-size: cover;
       background-position: center;
-
     }
 
     .inner {
@@ -58,137 +57,141 @@
     }
 
     .section-label {
-
       margin-bottom: 18px;
 
       font-size: 0.67rem;
       letter-spacing: 0.34em;
       text-transform: uppercase;
 
-      color: rgba(243,243,241,0.68);
-
+      color: rgba(243, 243, 241, 0.68);
     }
 
     h1 {
-
       margin: 0;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-size: clamp(
+        2.8rem,
+        6vw,
+        5rem
+      );
 
       font-weight: normal;
       line-height: 1.08;
-
     }
 
     .section-line {
-
       width: 75px;
       height: 1px;
 
       margin: 30px 0 38px;
 
-      background: rgba(255,255,255,0.38);
-
+      background:
+        rgba(255, 255, 255, 0.38);
     }
 
     .lead {
-
       max-width: 760px;
-
       margin: 0;
 
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-      font-size: clamp(1.25rem, 2vw, 1.55rem);
+      font-size: clamp(
+        1.25rem,
+        2vw,
+        1.55rem
+      );
 
       line-height: 1.7;
 
-      color: rgba(255,255,255,0.88);
-
+      color:
+        rgba(255, 255, 255, 0.88);
     }
 
     .locations {
-
       margin-top: 65px;
 
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
-      border-top: 1px solid rgba(255,255,255,0.18);
-      border-left: 1px solid rgba(255,255,255,0.18);
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.18);
 
+      border-left:
+        1px solid
+        rgba(255, 255, 255, 0.18);
     }
 
     .location {
-
       min-height: 165px;
-
       padding: 30px;
 
-      border-right: 1px solid rgba(255,255,255,0.18);
-      border-bottom: 1px solid rgba(255,255,255,0.18);
+      border-right:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.18);
 
       display: flex;
-
       flex-direction: column;
-
       justify-content: space-between;
 
       text-decoration: none;
-
       color: inherit;
 
-      transition: background 0.3s ease;
-
+      transition:
+        background 0.3s ease;
     }
 
     .location:hover {
-
-      background: rgba(255,255,255,0.045);
-
+      background:
+        rgba(255, 255, 255, 0.045);
     }
 
     .location-name {
-
-      font-family: Georgia, "Times New Roman", serif;
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       font-size: 1.5rem;
-
     }
 
     .location-note {
-
       margin-top: 20px;
 
       font-size: 0.75rem;
-
       letter-spacing: 0.14em;
-
       text-transform: uppercase;
 
-      color: rgba(243,243,241,0.38);
-
+      color:
+        rgba(243, 243, 241, 0.38);
     }
 
     .back-top {
-
       display: inline-block;
-
       margin-top: 55px;
 
-      color: rgba(243,243,241,0.68);
+      color:
+        rgba(243, 243, 241, 0.68);
 
       font-size: 0.67rem;
-
       letter-spacing: 0.2em;
-
       text-transform: uppercase;
 
       text-decoration: none;
-
     }
 
     .back-top:hover {
@@ -202,11 +205,8 @@
       }
 
       .locations {
-
         grid-template-columns: 1fr;
-
         margin-top: 45px;
-
       }
 
       .location {
@@ -236,12 +236,16 @@
       <div class="section-line"></div>
 
       <p class="lead">
-        Familiar places become part of something much larger as the story begins to widen.
+        Familiar places become part of something
+        much larger as the story begins to widen.
       </p>
 
       <div class="locations">
 
-        <a class="location" href="gchq/">
+        <a
+          class="location"
+          href="gchq/"
+        >
 
           <div class="location-name">
             GCHQ
@@ -253,9 +257,28 @@
 
         </a>
 
+
+        <a
+          class="location"
+          href="bellingham/"
+        >
+
+          <div class="location-name">
+            Bellingham
+          </div>
+
+          <div class="location-note">
+            Northumberland
+          </div>
+
+        </a>
+
       </div>
 
-      <a class="back-top" href="../../#world">
+      <a
+        class="back-top"
+        href="../../#world"
+      >
         ← Back to Explore the World
       </a>
 
