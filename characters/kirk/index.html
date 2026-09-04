@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +32,15 @@
       padding: 40px 0 70px;
     }
 
+    .back-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
     .back-link {
       display: inline-block;
-      margin-bottom: 30px;
       color: #ddd;
       text-decoration: none;
       font-size: 0.95rem;
@@ -119,9 +124,17 @@
 
   <main class="page">
 
-    <a class="back-link" href="../">
-      ← Back to characters
-    </a>
+    <div class="back-links">
+
+      <a class="back-link" href="../../#world">
+        ← Explore the World
+      </a>
+
+      <a class="back-link" href="../">
+        ← Characters
+      </a>
+
+    </div>
 
     <section class="character-hero">
 
@@ -136,7 +149,7 @@
       <div class="character-details">
 
         <div class="character-role">
-          Developer · GCHQ ·  Cheltenham
+          Developer · GCHQ · Cheltenham
         </div>
 
         <h1>
@@ -145,8 +158,10 @@
 
         <div class="character-intro">
 
-          Kirk is a dedicated developer at GCHQ in Cheltenham, known for his technical 
-          skills and ability to solve complex problems.
+          <p>
+            Kirk is a dedicated developer at GCHQ in Cheltenham, known for his technical
+            skills and ability to solve complex problems.
+          </p>
 
         </div>
 
@@ -163,12 +178,14 @@
       <p>
         Kirk is a key figure in the narrative, bringing his expertise and analytical mind to the forefront of the plot.
         His contributions are crucial in navigating the challenges faced by the characters.
-    </p>
+      </p>
+
       <p>
         Kirk
       </p>
+
       <p>
-        His charm 
+        His charm
       </p>
 
     </section>

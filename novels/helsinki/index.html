@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Helsinki | Frank Bird</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: #07151d;
+      color: #f3f3f1;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================================================
+       TOP BAR
+       ========================================================= */
+
+    .topbar {
+      min-height: 80px;
+      padding: 0 7%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+    }
+
+    .brand {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 1.15rem;
+      letter-spacing: 0.18em;
+
+      color: white;
+      text-decoration: none;
+    }
+
+    .home {
+      font-size: 0.67rem;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+    }
+
+
+    /* =========================================================
+       PAGE
+       ========================================================= */
+
+    .page {
+      min-height: calc(100vh - 80px);
+
+      padding: 100px 9% 120px;
+
+      background:
+        linear-gradient(
+          rgba(7, 21, 29, 0.82),
+          rgba(7, 21, 29, 0.96)
+        ),
+        url("../../images/sea.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+    }
+
+    .inner {
+      width: 100%;
+      max-width: 1000px;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       CONTENT
+       ========================================================= */
+
+    .section-label {
+      margin-bottom: 18px;
+
+      font-size: 0.67rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+
+      color:
+        rgba(243, 243, 241, 0.62);
+    }
+
+    h1 {
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(3.5rem, 8vw, 6.5rem);
+
+      font-weight: normal;
+      line-height: 1;
+    }
+
+    .subtitle {
+      margin-top: 14px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 1.25rem;
+      font-style: italic;
+
+      color:
+        rgba(243, 243, 241, 0.58);
+    }
+
+    .section-line {
+      width: 75px;
+      height: 1px;
+
+      margin: 35px 0 42px;
+
+      background:
+        rgba(255, 255, 255, 0.38);
+    }
+
+    .lead {
+      max-width: 760px;
+
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(1.3rem, 2vw, 1.6rem);
+
+      line-height: 1.75;
+
+      color:
+        rgba(255, 255, 255, 0.88);
+    }
+
+    .body-copy {
+      max-width: 720px;
+
+      margin-top: 30px;
+
+      font-size: 1rem;
+      line-height: 1.9;
+
+      color:
+        rgba(243, 243, 241, 0.68);
+    }
+
+    .coming-soon {
+      margin-top: 50px;
+
+      font-size: 0.72rem;
+      font-weight: 700;
+
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+
+      color:
+        rgba(255, 255, 255, 0.72);
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .navigation {
+      margin-top: 65px;
+
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .back-link {
+      color:
+        rgba(255, 255, 255, 0.76);
+
+      font-size: 0.72rem;
+      font-weight: 700;
+
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: white;
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 800px) {
+
+      .topbar {
+        min-height: 70px;
+        padding: 0 24px;
+      }
+
+      .page {
+        min-height: calc(100vh - 70px);
+
+        padding:
+          75px 28px 90px;
+      }
+
+      h1 {
+        font-size: 4rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <header class="topbar">
+
+    <a
+      class="brand"
+      href="../../"
+    >
+      FRANK BIRD
+    </a>
+
+    <a
+      class="home"
+      href="../../"
+    >
+      Home
+    </a>
+
+  </header>
+
+
+  <main class="page">
+
+    <div class="inner">
+
+      <div class="section-label">
+        Beyond Water Water Everywhere...
+      </div>
+
+      <h1>
+        Helsinki
+      </h1>
+
+      <div class="subtitle">
+        Some stories do not end where the novel does.
+      </div>
+
+      <div class="section-line"></div>
+
+      <p class="lead">
+        Helsinki follows one of the threads that extends beyond
+        the main narrative of <em>Water Water Everywhere...</em>
+      </p>
+
+      <p class="body-copy">
+        A different city. A different moment. Familiar connections.
+        Events that sit outside the novel reveal another small part
+        of the world surrounding the story.
+      </p>
+
+      <div class="coming-soon">
+        Story coming soon
+      </div>
+
+
+      <div class="navigation">
+
+        <a
+          class="back-link"
+          href="../"
+        >
+          ← The Novels
+        </a>
+
+        
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+</body>
+
+</html>

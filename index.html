@@ -311,6 +311,8 @@
     .site-section {
       position: relative;
 
+      min-height: 100vh;
+
       padding: 120px 9%;
 
       overflow: hidden;
@@ -403,7 +405,7 @@
        ========================================================= */
 
     #book {
-      min-height: 80vh;
+      min-height: 100vh;
 
       display: flex;
 
@@ -450,7 +452,15 @@
        ========================================================= */
 
     #behind {
-      background: var(--dark2);
+      background:
+        linear-gradient(
+          rgba(9, 27, 35, 0.90),
+          rgba(9, 27, 35, 0.96)
+        ),
+        url("images/sea.jpg");
+
+      background-size: cover;
+      background-position: center;
     }
 
     .story-grid {
@@ -589,7 +599,15 @@
        ========================================================= */
 
     #frank {
-      background: var(--dark);
+      background:
+        linear-gradient(
+          rgba(7, 21, 29, 0.90),
+          rgba(7, 21, 29, 0.96)
+        ),
+        url("images/sea.jpg");
+
+      background-size: cover;
+      background-position: center;
     }
 
     .author-layout {
@@ -723,24 +741,26 @@
        ========================================================= */
 
     .back-top {
-      display: inline-block;
+  display: inline-block;
 
-      margin-top: 55px;
+  margin-top: 55px;
 
-      color: var(--muted);
+  color: rgba(255, 255, 255, 0.82);
 
-      font-size: 0.67rem;
+  font-size: 0.78rem;
 
-      letter-spacing: 0.2em;
+  font-weight: 700;
 
-      text-transform: uppercase;
+  letter-spacing: 0.18em;
 
-      text-decoration: none;
-    }
+  text-transform: uppercase;
 
-    .back-top:hover {
-      color: white;
-    }
+  text-decoration: none;
+}
+
+.back-top:hover {
+  color: white;
+}
 
 
     /* =========================================================
@@ -950,8 +970,10 @@
         <div class="divider"></div>
 
         <div class="tagline">
-          Yes, it is everywhere.<br>
-          But what happens if you can't trust it?
+          H<sub>2</sub>O <br>
+          Water <br>
+          It may be everywhere.<br>
+          But what if you can't trust it?
         </div>
 
         <div class="coming-soon">
@@ -1042,11 +1064,11 @@
       </p>
 
       <a
-        class="back-top"
-        href="#top"
-      >
-        Back to top
-      </a>
+  class="back-top"
+  href="#top"
+>
+  ↑ Back to top
+</a>
 
     </div>
 
@@ -1081,65 +1103,89 @@
 
       <div class="story-grid">
 
-        <a
-          class="story-card story-link"
-          href="characters/"
-        >
+   <a
+  class="story-card story-link"
+  href="characters/"
+>
 
-          <h4>
-            The Characters
-          </h4>
+  <h4>
+    The Characters
+  </h4>
 
-          <p>
-            Meet some of the people drawn into a story
-            whose consequences extend far beyond anything
-            they first imagine.
-          </p>
+  <p>
+    Meet some of the people drawn into a story
+    whose consequences extend far beyond anything
+    they first imagine.
+  </p>
 
-          <div class="card-arrow">
-            Meet the characters →
-          </div>
+  <div class="card-arrow">
+    Meet the characters →
+  </div>
 
-        </a>
-
-
-        <div class="story-card">
-
-          <h4>
-            The Research
-          </h4>
-
-          <p>
-            Explore some of the real science, technology,
-            institutions and events that helped shape
-            the fictional world of the novel.
-          </p>
-
-        </div>
+</a>
 
 
-        <div class="story-card">
+<a
+  class="story-card story-link"
+  href="research/"
+>
 
-          <h4>
-            Beyond the Novel
-          </h4>
+  <h4>
+    The Research
+  </h4>
 
-          <p>
-            Additional stories and background material
-            will reveal events that sit outside the main
-            narrative.
-          </p>
+  <p>
+    Explore some of the real science, technology,
+    institutions and events that helped shape
+    the fictional world of the novel.
+  </p>
 
-        </div>
+  <div class="card-arrow">
+    Explore the research →
+  </div>
 
-      </div>
+</a>
 
-      <a
-        class="back-top"
-        href="#top"
-      >
-        Back to top
-      </a>
+
+<a
+  class="story-card story-link"
+  href="novels/"
+>
+
+  <h4>
+    Beyond the Novel
+  </h4>
+
+  <p>
+    Additional stories and background material
+    will reveal events that sit outside the main
+    narrative.
+  </p>
+
+  <div class="card-arrow">
+    Explore beyond the novel →
+  </div>
+
+</a>
+
+  <p>
+    Additional stories and background material
+    will reveal events that sit outside the main
+    narrative.
+  </p>
+
+  <div class="card-arrow">
+    Explore beyond the novel →
+  </div>
+
+</a>
+
+     <a
+  class="back-top"
+  href="#top"
+>
+  ↑ Back to top
+</a>
 
     </div>
 
@@ -1255,20 +1301,10 @@
         </a>
 
 
-        <div class="location">
-
-          <div class="location-name">
-            Moscow
-          </div>
-
-          <div class="location-note">
-            An unfinished story
-          </div>
-
-        </div>
-
-
-        <div class="location">
+        <a
+          class="location"
+          href="locations/helsinki/"
+        >
 
           <div class="location-name">
             Helsinki
@@ -1278,17 +1314,17 @@
             Where another story waits
           </div>
 
-        </div>
+        </a>
 
 
       </div>
 
-      <a
-        class="back-top"
-        href="#top"
-      >
-        Back to top
-      </a>
+     <a
+  class="back-top"
+  href="#top"
+>
+  ↑ Back to top
+</a>
 
     </div>
 
@@ -1336,36 +1372,46 @@
         <div class="author-copy">
 
           <p>
-            Born in the UK in the post-war years, Frank has spent much of his
-            working life in Britain, while also travelling extensively throughout
-            Europe and the USA. His career has included roles in construction,
-            the casino industry, engineering, management, R&amp;D, consultancy
-            and project management.
+            Born in the UK in the post-war years, Frank spent his home life in Britain,
+            while also travelling extensively throughout Europe and parts of the USA.
+            His career has included roles in construction, the casino and slot machine
+            industry, engineering, management, directorship, R&amp;D, consultancy and
+            project management.
           </p>
 
           <p>
             Frank came to writing as a relaxing escape from a working life that
-            repeatedly placed him close to developing technologies, engineering
-            and industry — and alongside many of the people responsible for
-            making complicated things actually work.
+            repeatedly placed him close to developing technologies, engineering and
+            industry — and alongside many of the people responsible for making
+            complicated things actually work.
+          </p>
+
+          <p>
+            Over the years, extraordinary developments in many fields have seamlessly
+            become part of everyday life. One of the challenges in writing the novel was
+            recognising what technology was actually available at the time and shaping
+            the story around it. Frank frequently referred back to his own experiences
+            and diaries to make sure everything fitted the period. He was instrumental
+            in some associated technological developments, but none of those has been
+            documented here. <em>(Looks over his shoulder.)</em>
           </p>
 
           <p>
             Those experiences, together with a longstanding fascination with how
-            apparently separate events can become connected, helped provide the
-            foundations for <em>Water Water Everywhere...</em>
+            disparate events can become connected, helped provide the foundations for
+            <em>Water Water Everywhere...</em>
           </p>
 
           <p>
-            This is his first novel.
+            This is Frank’s debut novel.
           </p>
 
-          <a
-            class="back-top"
-            href="#top"
-          >
-            Back to top
-          </a>
+         <a
+  class="back-top"
+  href="#top"
+>
+  ↑ Back to top
+</a>
 
         </div>
 
@@ -1389,6 +1435,8 @@
       </div>
 
       <h3>
+        Water, H2O.
+        <br>
         Yes, it is everywhere.
         <br>
         But can you trust it?
@@ -1414,8 +1462,8 @@
   <!-- REVISION -->
 
   <div class="revision">
-  <h1>
-    Revision 1.3.1..
+    <h1>
+      Revision 1.3.1..
     </h1>
   </div>
 

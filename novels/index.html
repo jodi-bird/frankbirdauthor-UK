@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Novels | Frank Bird</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: #07151d;
+      color: #f3f3f1;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+    }
+
+
+    /* =========================================================
+       TOP BAR
+       ========================================================= */
+
+    .topbar {
+      min-height: 80px;
+      padding: 0 7%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+    }
+
+    .brand {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 1.15rem;
+      letter-spacing: 0.18em;
+
+      color: white;
+      text-decoration: none;
+    }
+
+    .home {
+      font-size: 0.67rem;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+    }
+
+
+    /* =========================================================
+       PAGE
+       ========================================================= */
+
+    .page {
+      min-height: calc(100vh - 80px);
+
+      padding: 90px 8% 120px;
+
+      background:
+        linear-gradient(
+          rgba(7, 21, 29, 0.84),
+          rgba(7, 21, 29, 0.96)
+        ),
+        url("../images/sea.jpg");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .inner {
+      width: 100%;
+      max-width: 1180px;
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       HEADING
+       ========================================================= */
+
+    .section-label {
+      margin-bottom: 18px;
+
+      font-size: 0.67rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+
+      color: rgba(243, 243, 241, 0.68);
+    }
+
+    h1 {
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(3rem, 7vw, 5.5rem);
+
+      font-weight: normal;
+      line-height: 1.05;
+    }
+
+    .section-line {
+      width: 75px;
+      height: 1px;
+
+      margin: 30px 0 38px;
+
+      background:
+        rgba(255, 255, 255, 0.38);
+    }
+
+    .lead {
+      max-width: 760px;
+
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(1.25rem, 2vw, 1.55rem);
+
+      line-height: 1.75;
+
+      color:
+        rgba(255, 255, 255, 0.86);
+    }
+
+
+    /* =========================================================
+       NOVEL CARDS
+       ========================================================= */
+
+    .novels {
+      margin-top: 70px;
+
+      display: grid;
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 32px;
+    }
+
+    .novel-card {
+      min-height: 340px;
+
+      padding: 38px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+      background:
+        rgba(5, 18, 25, 0.48);
+
+      color: inherit;
+      text-decoration: none;
+
+      transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .novel-card:hover {
+      background:
+        rgba(255, 255, 255, 0.045);
+
+      border-color:
+        rgba(255, 255, 255, 0.32);
+
+      transform:
+        translateY(-3px);
+    }
+
+    .card-label {
+      font-size: 0.67rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+
+      color:
+        rgba(255, 255, 255, 0.48);
+    }
+
+    .novel-card h2 {
+      margin: 18px 0 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 2.2rem;
+      font-weight: normal;
+      line-height: 1.15;
+    }
+
+    .novel-card p {
+      margin: 24px 0 0;
+
+      max-width: 470px;
+
+      color:
+        rgba(243, 243, 241, 0.66);
+
+      line-height: 1.8;
+    }
+
+    .card-link {
+      margin-top: 45px;
+
+      font-size: 0.70rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+
+      color:
+        rgba(255, 255, 255, 0.76);
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .navigation {
+      margin-top: 70px;
+
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .back-link {
+      color:
+        rgba(255, 255, 255, 0.76);
+
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: white;
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 800px) {
+
+      .topbar {
+        min-height: 70px;
+        padding: 0 24px;
+      }
+
+      .page {
+        padding:
+          70px 28px 90px;
+      }
+
+      .novels {
+        grid-template-columns: 1fr;
+      }
+
+      .novel-card {
+        min-height: 300px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <header class="topbar">
+
+    <a
+      class="brand"
+      href="../"
+    >
+      FRANK BIRD
+    </a>
+
+    <a
+      class="home"
+      href="../"
+    >
+      Home
+    </a>
+
+  </header>
+
+
+  <main class="page">
+
+    <div class="inner">
+
+      <div class="section-label">
+        Beyond the story
+      </div>
+
+      <h1>
+        The Novels
+      </h1>
+
+      <div class="section-line"></div>
+
+      <p class="lead">
+        Stories may finish on the final page.
+        Their worlds do not necessarily end there.
+      </p>
+
+
+      <div class="novels">
+
+
+        <a
+          class="novel-card"
+          href="../#book"
+        >
+
+          <div>
+
+            <div class="card-label">
+              The debut novel
+            </div>
+
+            <h2>
+              Water Water Everywhere...
+            </h2>
+
+            <p>
+              The story that begins with apparently disconnected
+              events across countries and continents — and slowly
+              reveals the connections between them.
+            </p>
+
+          </div>
+
+          <div class="card-link">
+            Return to the book →
+          </div>
+
+        </a>
+
+
+        <a
+          class="novel-card"
+          href="helsinki/"
+        >
+
+          <div>
+
+            <div class="card-label">
+              Beyond the novel
+            </div>
+
+            <h2>
+              Helsinki
+            </h2>
+
+            <p>
+              Some stories continue beyond the main narrative.
+              Helsinki offers another glimpse into the world
+              surrounding <em>Water Water Everywhere...</em>
+            </p>
+
+          </div>
+
+          <div class="card-link">
+            Enter Helsinki →
+          </div>
+
+        </a>
+
+
+      </div>
+
+
+      <div class="navigation">
+
+        <a
+          class="back-link"
+          href="../#behind"
+        >
+          ← Behind the Story
+        </a>
+
+        <a
+          class="back-link"
+          href="../"
+        >
+          ↑ Home
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+</body>
+
+</html>
