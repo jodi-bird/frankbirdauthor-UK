@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supabase Comments Test</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+
+    input,
+    textarea,
+    button {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    .comment {
+      border-top: 1px solid #ccc;
+      padding: 15px 0;
+    }
+
+    .author-response {
+      margin-left: 20px;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Supabase Comments Test</h1>
+
+  <h2>Submit a comment</h2>
+
+  <form id="comment-form">
+    <label for="name">Name</label>
+    <input id="name" type="text" required>
+
+    <label for="comment">Comment</label>
+    <textarea id="comment" required></textarea>
+
+    <button type="submit">Submit comment</button>
+  </form>
+
+  <p id="message"></p>
+
+  <h2>Approved comments</h2>
+
+  <div id="comments">
+    Loading approved comments...
+  </div>
+
+<script>
+  const SUPABASE_URL = 'https://ufpljeslheukldqcfldl.supabase.co';
+
+  const SUPABASE_KEY = 'sb_publishable_d_3dQDI2cA16P1qwCwdqmw_tI7pPyt4';
+
+  const db = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+
+    // --------------------------------------------------
+    // LOAD APPROVED COMMENTS
+    // --------------------------------------------------
+
+    async function loadComments() {
+
+      const commentsDiv = document.getElementById('comments');
+
+      const { data, error } = await db
+        .from('comments')
+        .select('id, created_at, name, comment, author_response')
+        .eq('page', 'book')
+        .eq('status', 'approved')
+        .order('created_at', { ascending: false });
+
+      if (error) {
+        commentsDiv.textContent =
+          'Error loading comments: ' + error.message;
+        return;
+      }
+
+      commentsDiv.textContent = '';
+
+      if (data.length === 0) {
+        commentsDiv.textContent = 'No approved comments.';
+        return;
+      }
+
+      data.forEach(item => {
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'comment';
+
+        const name = document.createElement('strong');
+        name.textContent = item.name;
+
+        const comment = document.createElement('p');
+        comment.textContent = item.comment;
+
+        wrapper.appendChild(name);
+        wrapper.appendChild(comment);
+
+        if (item.author_response) {
+
+          const response = document.createElement('p');
+          response.className = 'author-response';
+          response.textContent =
+            'Frank Bird: ' + item.author_response;
+
+          wrapper.appendChild(response);
+        }
+
+        commentsDiv.appendChild(wrapper);
+      });
+    }
+
+
+    // --------------------------------------------------
+    // SUBMIT NEW COMMENT
+    // --------------------------------------------------
+
+    document
+      .getElementById('comment-form')
+      .addEventListener('submit', async function(event) {
+
+        event.preventDefault();
+
+        const message = document.getElementById('message');
+
+        const name =
+          document.getElementById('name').value.trim();
+
+        const comment =
+          document.getElementById('comment').value.trim();
+
+        message.textContent = 'Submitting...';
+
+        const { error } = await db
+          .from('comments')
+          .insert([
+            {
+              name: name,
+              comment: comment,
+              page: 'book'
+            }
+          ]);
+
+        if (error) {
+          message.textContent =
+            'Submission failed: ' + error.message;
+          return;
+        }
+
+        message.textContent =
+          'Thank you. Your comment has been submitted for approval.';
+
+        document.getElementById('comment-form').reset();
+      });
+
+
+    loadComments();
+
+  </script>
+
+</body>
+</html>

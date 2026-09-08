@@ -41,6 +41,8 @@
 }
 </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <style>
 
     /* =========================================================
@@ -686,6 +688,267 @@
     }
 
 
+
+    /* =========================================================
+       READER REACTIONS
+       ========================================================= */
+
+    .reader-reactions {
+      width: min(100%, 380px);
+
+      margin-top: 34px;
+      padding-top: 24px;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+    }
+
+    .reader-reactions-label {
+      margin-bottom: 12px;
+
+      font-size: 0.67rem;
+
+      letter-spacing: 0.28em;
+
+      text-transform: uppercase;
+
+      color: var(--muted);
+    }
+
+    .reader-reactions h4 {
+      margin: 0 0 12px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 1.35rem;
+
+      font-weight: normal;
+    }
+
+    .reader-reactions-intro {
+      margin: 0;
+
+      font-size: 0.9rem;
+
+      line-height: 1.7;
+
+      color: var(--muted);
+    }
+
+    .reader-reactions-list {
+      margin-top: 18px;
+    }
+
+    .reader-reaction {
+      margin: 0;
+      padding: 14px 0;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+    }
+
+    .reader-reaction:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .reader-reaction-text {
+      margin: 0;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 0.95rem;
+
+      font-style: italic;
+
+      line-height: 1.65;
+
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .reader-reaction-name {
+      margin-top: 7px;
+
+      font-size: 0.67rem;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
+
+      color: var(--faint);
+    }
+
+    .reader-author-response {
+      margin: 10px 0 0 14px;
+      padding-left: 12px;
+
+      border-left:
+        1px solid
+        rgba(255, 255, 255, 0.22);
+
+      font-size: 0.82rem;
+
+      font-style: italic;
+
+      line-height: 1.65;
+
+      color: var(--muted);
+    }
+
+    .reader-reactions-empty {
+      margin: 0;
+
+      font-size: 0.86rem;
+
+      line-height: 1.7;
+
+      color: var(--faint);
+    }
+
+    .comment-entry {
+      margin-top: 18px;
+      padding-top: 16px;
+
+      border-top:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+    }
+
+    .comment-entry summary {
+      cursor: pointer;
+
+      list-style: none;
+
+      font-size: 0.72rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.16em;
+
+      text-transform: uppercase;
+
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .comment-entry summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .comment-entry summary::after {
+      content: " +";
+
+      color: var(--faint);
+    }
+
+    .comment-entry[open] summary::after {
+      content: " −";
+    }
+
+    .comment-form {
+      margin-top: 18px;
+    }
+
+    .comment-form label {
+      display: block;
+
+      margin: 12px 0 6px;
+
+      font-size: 0.67rem;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+      color: var(--muted);
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+      width: 100%;
+
+      padding: 10px 11px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+      border-radius: 4px;
+
+      background:
+        rgba(255, 255, 255, 0.05);
+
+      color: var(--text);
+
+      font: inherit;
+    }
+
+    .comment-form textarea {
+      min-height: 95px;
+
+      resize: vertical;
+    }
+
+    .comment-form input:focus,
+    .comment-form textarea:focus {
+      outline:
+        1px solid
+        rgba(255, 255, 255, 0.45);
+
+      border-color:
+        rgba(255, 255, 255, 0.45);
+    }
+
+    .comment-submit {
+      margin-top: 14px;
+      padding: 9px 13px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.28);
+
+      border-radius: 4px;
+
+      background: transparent;
+
+      color: rgba(255, 255, 255, 0.88);
+
+      font-size: 0.68rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+    }
+
+    .comment-submit:hover {
+      background:
+        rgba(255, 255, 255, 0.06);
+    }
+
+    .comment-message {
+      min-height: 1.5em;
+
+      margin: 12px 0 0;
+
+      font-size: 0.8rem;
+
+      line-height: 1.5;
+
+      color: var(--muted);
+    }
+
+
     /* =========================================================
        FINAL PANEL
        ========================================================= */
@@ -950,6 +1213,12 @@
         width: min(100%, 300px);
 
         margin-top: 30px;
+      }
+
+      .reader-reactions {
+        width: min(100%, 420px);
+
+        margin-top: 32px;
       }
 
 
@@ -1382,6 +1651,89 @@
 
         </div>
 
+        <aside
+          class="reader-reactions"
+          id="reader-reactions"
+          aria-labelledby="reader-reactions-heading"
+        >
+
+          <div class="reader-reactions-label">
+            From readers
+          </div>
+
+          <h4 id="reader-reactions-heading">
+            Reader reactions
+          </h4>
+
+          <p class="reader-reactions-intro">
+            A few approved comments from readers.
+          </p>
+
+          <div
+            class="reader-reactions-list"
+            id="reader-reactions-list"
+            aria-live="polite"
+          >
+
+            <p class="reader-reactions-empty">
+              Loading reader reactions...
+            </p>
+
+          </div>
+
+          <details class="comment-entry">
+
+            <summary>
+              Leave a comment
+            </summary>
+
+            <form
+              class="comment-form"
+              id="comment-form"
+            >
+
+              <label for="comment-name">
+                Name
+              </label>
+
+              <input
+                id="comment-name"
+                name="name"
+                type="text"
+                maxlength="80"
+                required
+              >
+
+              <label for="comment-text">
+                Comment
+              </label>
+
+              <textarea
+                id="comment-text"
+                name="comment"
+                maxlength="1200"
+                required
+              ></textarea>
+
+              <button
+                class="comment-submit"
+                type="submit"
+              >
+                Submit comment
+              </button>
+
+              <p
+                class="comment-message"
+                id="comment-message"
+                aria-live="polite"
+              ></p>
+
+            </form>
+
+          </details>
+
+        </aside>
+
         </div>
 
 
@@ -1421,15 +1773,7 @@
           <p>
             This is Frank’s debut novel.
           </p>
-
-          <a
-            class="back-top"
-            href="about/"
-          >
-            More about Frank Bird →
-          </a>
-
-          <a
+<a
             class="back-top"
             href="#top"
           >
@@ -1486,10 +1830,230 @@
 
   <div class="revision">
     <h1>
-      Revision 2.0.0
+      Revision 2.1.0
     </h1>
   </div>
 
+
+
+  <script>
+
+    const SUPABASE_URL =
+      'https://ufpljeslheukldqcfldl.supabase.co';
+
+    const SUPABASE_KEY =
+      'sb_publishable_d_3dQDI2cA16P1qwCwdqmw_tI7pPyt4';
+
+    const db = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_KEY
+    );
+
+
+    // --------------------------------------------------
+    // LOAD THE THREE MOST RECENT APPROVED COMMENTS
+    // --------------------------------------------------
+
+    async function loadReaderReactions() {
+
+      const commentsDiv =
+        document.getElementById('reader-reactions-list');
+
+      if (!commentsDiv) {
+        return;
+      }
+
+      const { data, error } = await db
+        .from('comments')
+        .select(
+          'id, created_at, name, comment, author_response'
+        )
+        .eq('page', 'book')
+        .eq('status', 'approved')
+        .order('created_at', { ascending: false })
+        .limit(3);
+
+      if (error) {
+        commentsDiv.innerHTML = '';
+
+        const message =
+          document.createElement('p');
+
+        message.className =
+          'reader-reactions-empty';
+
+        message.textContent =
+          'Reader reactions are temporarily unavailable.';
+
+        commentsDiv.appendChild(message);
+
+        console.error(
+          'Supabase comment load failed:',
+          error
+        );
+
+        return;
+      }
+
+      commentsDiv.innerHTML = '';
+
+      if (!data || data.length === 0) {
+
+        const empty =
+          document.createElement('p');
+
+        empty.className =
+          'reader-reactions-empty';
+
+        empty.textContent =
+          'Reader reactions will appear here as they are approved.';
+
+        commentsDiv.appendChild(empty);
+
+        return;
+      }
+
+      data.forEach(item => {
+
+        const wrapper =
+          document.createElement('article');
+
+        wrapper.className =
+          'reader-reaction';
+
+
+        const comment =
+          document.createElement('p');
+
+        comment.className =
+          'reader-reaction-text';
+
+        comment.textContent =
+          '“' + item.comment + '”';
+
+
+        const name =
+          document.createElement('div');
+
+        name.className =
+          'reader-reaction-name';
+
+        name.textContent =
+          item.name;
+
+
+        wrapper.appendChild(comment);
+        wrapper.appendChild(name);
+
+
+        if (item.author_response) {
+
+          const response =
+            document.createElement('p');
+
+          response.className =
+            'reader-author-response';
+
+          response.textContent =
+            'Frank Bird: ' +
+            item.author_response;
+
+          wrapper.appendChild(response);
+        }
+
+
+        commentsDiv.appendChild(wrapper);
+      });
+    }
+
+
+    // --------------------------------------------------
+    // SUBMIT A NEW COMMENT FOR MODERATION
+    // --------------------------------------------------
+
+    const commentForm =
+      document.getElementById('comment-form');
+
+    if (commentForm) {
+
+      commentForm.addEventListener(
+        'submit',
+        async function(event) {
+
+          event.preventDefault();
+
+          const message =
+            document.getElementById(
+              'comment-message'
+            );
+
+          const name =
+            document.getElementById(
+              'comment-name'
+            ).value.trim();
+
+          const comment =
+            document.getElementById(
+              'comment-text'
+            ).value.trim();
+
+          if (!name || !comment) {
+            message.textContent =
+              'Please enter your name and comment.';
+            return;
+          }
+
+          message.textContent =
+            'Submitting...';
+
+          const submitButton =
+            commentForm.querySelector(
+              'button[type="submit"]'
+            );
+
+          submitButton.disabled = true;
+
+
+          const { error } = await db
+            .from('comments')
+            .insert([
+              {
+                name: name,
+                comment: comment,
+                page: 'book'
+              }
+            ]);
+
+
+          submitButton.disabled = false;
+
+
+          if (error) {
+
+            message.textContent =
+              'Your comment could not be submitted. Please try again.';
+
+            console.error(
+              'Supabase comment submission failed:',
+              error
+            );
+
+            return;
+          }
+
+
+          message.textContent =
+            'Thank you. Your comment has been submitted for approval.';
+
+          commentForm.reset();
+        }
+      );
+    }
+
+
+    loadReaderReactions();
+
+  </script>
 
 </body>
 
