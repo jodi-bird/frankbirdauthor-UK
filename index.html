@@ -169,6 +169,32 @@
       text-transform: uppercase;
 
       opacity: 0.65;
+
+      transition:
+        opacity 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .author a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .author:hover,
+    .author:focus-within {
+      opacity: 1;
+      color: #f0a14a;
+    }
+
+    .author a:hover,
+    .author a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .author a:focus-visible {
+      outline: 2px solid #f0a14a;
+      outline-offset: 5px;
     }
 
 
@@ -1254,7 +1280,7 @@
         </h1>
 
         <div class="author">
-          Author
+          <a href="about-me/" aria-label="More about Frank Bird">Author</a>
         </div>
 
         <div class="divider"></div>
